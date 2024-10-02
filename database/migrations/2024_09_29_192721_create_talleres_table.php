@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('direccion');
             $table->string('correo');
             $table->foreign('id_municipios')->references('id_municipios')->on('municipios');
-            $table->foreign('id_usuarios')->references('id_usuarios')->on('usuarios');
+            $table->foreign('id_usuarios')->references('id')->on('users');
             $table->timestamps();
         });
     }
